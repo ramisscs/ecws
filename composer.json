@@ -1,7 +1,7 @@
 {
     "name": "sabahalsalem/ecws",
     "type": "project",
-    "description": "Electronic Correspondence & Workflow System for Sabah Al-Salem Cooperative Society",
+    "description": "Electronic Correspondence & Workflow System - Sabah Al-Salem Cooperative Society",
     "keywords": ["laravel", "correspondence", "workflow", "ecws", "kuwait"],
     "license": "proprietary",
     "require": {
@@ -34,6 +34,9 @@
         }
     },
     "scripts": {
+        "pre-autoload-dump": [
+            "@php -r \"mkdir('bootstrap/cache', 0777, true); mkdir('storage/framework/views', 0777, true); mkdir('storage/framework/cache', 0777, true); mkdir('storage/framework/cache/data', 0777, true); mkdir('storage/framework/sessions', 0777, true); mkdir('storage/framework/testing', 0777, true); mkdir('storage/logs', 0777, true); mkdir('storage/app/public', 0777, true); echo 'Directories created.';\""
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
@@ -45,8 +48,7 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "@php artisan key:generate --ansi",
-            "@php artisan storage:link --ansi"
+            "@php artisan key:generate --ansi"
         ]
     },
     "extra": {
