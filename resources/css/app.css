@@ -1,0 +1,103 @@
+@import 'tailwindcss';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+@theme {
+    --color-primary-50: #E8EEF4;
+    --color-primary-100: #D1DDE9;
+    --color-primary-200: #A3BBD3;
+    --color-primary-300: #7599BD;
+    --color-primary-400: #4777A7;
+    --color-primary-500: #1B3A5C;
+    --color-primary-600: #162E4A;
+    --color-primary-700: #112338;
+    --color-primary-800: #0B1725;
+    --color-primary-900: #060C13;
+    --color-accent-400: #D4A84B;
+    --color-accent-500: #C8963E;
+    --color-accent-600: #A07830;
+    --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+    direction: rtl;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #475569;
+}
+
+/* Smooth transitions */
+* {
+    transition-property: color, background-color, border-color;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+}
+
+/* Form focus states */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+}
+
+/* Table improvements */
+table th {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.pagination a, .pagination span {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.pagination a {
+    background-color: #F1F5F9;
+    color: #475569;
+}
+
+.pagination a:hover {
+    background-color: #E2E8F0;
+}
+
+.dark .pagination a {
+    background-color: #334155;
+    color: #CBD5E1;
+}
+
+.pagination span[aria-current="page"] {
+    background-color: #1B3A5C;
+    color: white;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+    }
+}

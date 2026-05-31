@@ -1,0 +1,22 @@
+{
+    "name": "ecws",
+    "version": "1.0.0",
+    "description": "Electronic Correspondence & Workflow System",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite"
+    },
+    "devDependencies": {
+        "@tailwindcss/vite": "^4.0.0",
+        "axios": "^1.7.4",
+        "concurrently": "^9.0.1",
+        "tailwindcss": "^4.0.0",
+        "vite": "^6.0"
+    },
+    "dependencies": {
+        "alpinejs": "^3.14",
+        "@fortawesome/fontawesome-free": "^6.7"
+    }
+}
