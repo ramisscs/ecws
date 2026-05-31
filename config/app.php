@@ -9,7 +9,7 @@ return [
     'locale' => env('APP_LOCALE', 'ar'),
     'fallback_locale' => env('APP_FALLBACK_LOCALE', 'ar'),
     'faker_locale' => env('APP_FAKER_LOCALE', 'ar_SA'),
-    'key' => env('APP_KEY'),
+    'key' => 'base64:4iqy1g8FzSJidIL6Ldn0HMSbvhJ20Gmn82QjajsS5lo=',
     'cipher' => 'AES-256-CBC',
     'maintenance' => [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
